@@ -1,0 +1,79 @@
+.App {
+  text-align: center;
+}
+
+.log-viewer-container {
+  height: 70vh;
+  border: 1px solid #d2d2d2;
+  border-radius: 4px;
+}
+
+.stats-cards {
+  margin-bottom: 2rem;
+}
+
+.connection-status {
+  margin-bottom: 1rem;
+}
+
+.connection-indicator {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.connection-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #28a745;
+  animation: pulse 2s infinite;
+}
+
+.connection-dot.disconnected {
+  background-color: #dc3545;
+  animation: none;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(40, 167, 69, 0.7);
+  }
+  
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 10px rgba(40, 167, 69, 0);
+  }
+  
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(40, 167, 69, 0);
+  }
+}
+
+.log-entry {
+  font-family: 'Courier New', monospace;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.log-level-info {
+  color: #2196F3;
+}
+
+.log-level-warn {
+  color: #FF9800;
+}
+
+.log-level-error {
+  color: #F44336;
+}
+
+.log-level-debug {
+  color: #9E9E9E;
+}
+
+.toolbar-section {
+  margin-bottom: 1rem;
+}
